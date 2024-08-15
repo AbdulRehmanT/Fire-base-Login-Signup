@@ -1,4 +1,13 @@
-import { auth, onAuthStateChanged } from "./firebase.js";
+import {
+  auth,
+  onAuthStateChanged,
+  db,
+  collection,
+  addDoc,
+  serverTimestamp,
+  getDocs,
+  onSnapshot,
+} from "./firebase.js";
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
